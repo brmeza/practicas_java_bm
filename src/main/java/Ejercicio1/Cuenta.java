@@ -7,6 +7,9 @@ public class Cuenta {
     private  double tipoDeInteres;
     private double saldo;
 
+    /**
+     * Constructor por defecto
+     */
     public Cuenta() {
         this.nombreCliente = "";
         this.numeroCuenta = "";
@@ -14,6 +17,13 @@ public class Cuenta {
         this.saldo = 0;
     }
 
+    /**
+     * Constructor con parametros
+     * @param nombreCliente
+     * @param numeroCuenta
+     * @param tipoDeInteres
+     * @param saldo
+     */
     public Cuenta(String nombreCliente, String numeroCuenta, double tipoDeInteres, double saldo) {
         this.nombreCliente = nombreCliente;
         this.numeroCuenta = numeroCuenta;
@@ -21,6 +31,10 @@ public class Cuenta {
         this.saldo = saldo;
     }
 
+    /**
+     * Constructor copia
+     * @param c
+     */
     public Cuenta(final Cuenta c){
         this.nombreCliente = c.nombreCliente;
         this.numeroCuenta = c.numeroCuenta;
@@ -28,6 +42,7 @@ public class Cuenta {
         this. saldo = c.saldo;
     }
 
+    //metodos getter y setter
     public String getNombreCliente(){
         return this.nombreCliente;
     }
@@ -58,6 +73,11 @@ public class Cuenta {
         this.saldo=saldo;
     }
 
+    /**
+     * Metodo para calcular el interes
+     * @param cantIngreso
+     * @return
+     */
     public boolean ingreso(double cantIngreso){
         while (cantIngreso < 0){
             System.out.println("ingresar un valor positivo");
@@ -67,6 +87,11 @@ public class Cuenta {
         return true;
     }
 
+    /**
+     * Metodo para retirar dinero
+     * @param cantReintegro
+     * @return
+     */
     public boolean reintegro(double cantReintegro){
         if (cantReintegro>this.saldo){
             System.out.println("Saldo no disponible");
@@ -80,6 +105,11 @@ public class Cuenta {
         }
     }
 
+    /**
+     * Metodo para transferir dinero
+     * @param cuentaDestinataria
+     * @param cantidad
+     */
     public void trasferencia (Cuenta cuentaDestinataria, double cantidad){
         if (cantidad>this.saldo){
             System.out.println("Saldo insuficiente para esta transaccion");

@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 public class Juego {
 
+    /**
+     * Metodo adivinador que adivina un numero en un rango dado
+     */
     public void adivinador(){
         Scanner sc = new Scanner(System.in);
         int max, min,maxIntentos,posible;

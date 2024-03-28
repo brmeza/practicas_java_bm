@@ -3,6 +3,7 @@ import Adivinador.Juego;
 import Arrays.Array;
 import Ejercicio1.Ejecucion;
 import Ejercicio2.Eje2;
+import Proyecto2.Juego21Cartas;
 import Random.ArregloAleatorioDeLetras;
 import Random.ArregloAleatorioDeNum;
 
@@ -53,7 +54,8 @@ public class Main {
                 aleatorioDeLetras.arregloLetras(12);
                 break;
             case 7:
-
+                Juego21Cartas juego21Cartas = new Juego21Cartas();
+                juego21Cartas.game();
                 break;
             default:
                 System.out.println("no has seleccionado nada ");
